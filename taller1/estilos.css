@@ -1,0 +1,183 @@
+/* 
+    Document   : estilo1
+    Created on : 19/08/2015, 07:48:04 PM
+    Author     : LAB6
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.marco{
+ background: #BCF5A9;
+ border-radius: 10px;
+ color: blue;
+ width:50%;
+  padding: 10px 10px;
+
+box-shadow:15px 15px 15px black;
+}
+#fila:hover{
+    background-color: skyblue;
+    font-weight: bold;
+    height: 20px;
+}
+body{
+    background: burlywood;
+}
+.Label1
+{
+    font-family: Sans-Serif;
+    font-size : 30px;
+    text-align: center;
+    color: Lime;
+}
+
+/*Vamos a crear un estilo para el boton*/
+.Boton01
+{
+	background: #F60;
+	border:thin solid transparent;
+	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 1em;
+	padding: .5em;
+
+}
+.Boton01:hover{
+	background: skyblue;
+	border:thin solid #F60;
+	-moz-border-radius: .0em;
+	-webkit-border-radius: .0em;
+	
+	color:#F60;
+}
+
+/*Estilo para la caja de Texto*/
+.Texto
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+    margin-bottom: 0px;
+}
+/* Para Grillas */
+.mGrid { 
+    width: 60%; 
+    background-color: #fff; 
+  /*  margin: 5px 0 10px 0;*/
+  margin:auto; 
+    border: solid 1px #525252; 
+    border-collapse:collapse; 
+}
+.mGrid td { 
+    padding: 2px; 
+    border: solid 1px #c1c1c1; 
+    color: black;
+}
+.mGrid tr:nth-child(even) { 
+background-color: #E8DFDF;;
+}
+.mGrid tr:nth-child(odd){
+	background-color: #D0DC8F;;
+}
+
+.mGrid th { 
+    padding: 4px 2px; 
+    color: #fff; 
+    background: #424242 url('../Imagenes/grd_head.png') repeat-x top; 
+    border-left: solid 1px #525252; 
+    font-size: 1.2em;
+    font-weight: bolder;  
+    background:gray;
+    
+}
+.mGrid .alt { background: #fcfcfc }
+.mGrid .pgr { background: #424242 }
+.mGrid .pgr table { margin: 5px 0; }
+.mGrid .pgr td { 
+    border-width: 0; 
+    padding: 0 6px; 
+    border-left: solid 1px #666; 
+    font-weight: bold; 
+    color: #fff; 
+    line-height: 12px; 
+ }   
+.mGrid .pgr a { color: #666; text-decoration: none; }
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+
+h2{
+    color: white;
+    font-family: sans-serif;
+}
+input#boton{
+    padding: 5px 50px;
+    color:white;
+    font-size: lem;
+    background-color:#bdbdbd ;
+    border:0px;
+    border-radius: 5px 5px 5px 5px;
+     box-shadow: 0px 4px 0px #4AA4DF;
+   -webkit-transition: background-color .25s;
+    cursor: pointer;
+  margin-top: 100px;
+   }
+input#boton:hover{
+    background-color: red;
+    
+}
+
+div#cabeza{
+    
+margin:auto;
+margin-top:20px;
+width:350px;
+height:50PX;
+ background: linear-gradient(greenyellow 0%,#890046 90%);
+border-radius: 10px 10px 10px 10px;
+-webkit-transition:width 1s ease-in;
+
+}
+
+div#cabeza:hover{
+width:825px;
+}
+ .webgrid-table
+                {
+                    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+                    font-size: 1.2em;
+                    width: 100%;
+                    display: table;
+                    border-collapse: separate;
+                    border: solid 1px #98BF21;
+                    background-color: white;
+                }
+                .webgrid-table td, th
+                {
+                    border: 1px solid #98BF21;
+                    padding: 3px 7px 2px;
+                }
+                .webgrid-header
+                {
+                    background-color: #A7C942;
+                    color: #FFFFFF;
+                    padding-bottom: 4px;
+                    padding-top: 5px;
+                    text-align: left;
+                }
+                .webgrid-footer
+                {
+                }
+                .webgrid-row-style
+                {
+                    padding: 3px 7px 2px;
+                }
+                .webgrid-alternating-row
+                {
+                    background-color: #EAF2D3;
+                    padding: 3px 7px 2px;
+                }

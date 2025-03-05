@@ -1,0 +1,138 @@
+/* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .opciones-pago {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .opcion {
+            text-align: center;
+        }
+
+        .opcion input {
+            margin-right: 10px;
+        }
+
+        .tabla-pagos {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            float: left;
+        }
+
+        .tabla-pagos th, .tabla-pagos td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .tabla-pagos th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .tabla-pagos img {
+            max-width: 50px;
+            height: auto;
+        }
+
+        .form-container {
+            width: 45%;
+            float: right;
+            margin-top: 0;
+        }
+
+        .form-container > div {
+            width: 100%;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .btn-pagar {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn-pagar:hover {
+            background-color: #45a049;
+        }
+
+        /* Botón pequeño para regresar */
+        .btn-regresar {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-regresar:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-regresar::before {
+            content: '←';
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }

@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.jpg'); /* Reemplaza 'fondo.jpg' con el nombre de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    gap: 50px; /* Espacio entre las imágenes */
+  }
+
+  .role {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .role img {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .role img:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse */
+  }
+
+  .role p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }

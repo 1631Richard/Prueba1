@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f; /* Fondo de encabezado más oscuro */
+    color: #bb86fc; /* Texto púrpura claro */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Estilo para la tabla de productos */
+table {
+    width: 135%;
+    border-collapse: collapse;
+    background-color: #1e1e1e; /* Fondo de tabla oscuro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+th, td {
+    border: 1px solid #333; /* Bordes oscuros */
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2a2a2a; /* Encabezado más oscuro */
+    color: #bb86fc; /* Texto púrpura claro */
+}
+
+td {
+    font-size: 16px;
+    color: #e0e0e0; /* Texto claro */
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilo para la tabla de resumen */
+.resumen {
+    width: 25%;
+    padding: 20px;
+    margin-left: 20px;
+    border: 1px solid #333; /* Bordes oscuros */
+    background-color: #1e1e1e; /* Fondo oscuro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    align-self: flex-start;
+}
+
+.resumen table {
+    width: 100%;
+}
+
+.resumen th, .resumen td {
+    padding: 8px;
+    text-align: left;
+}
+
+.resumen th {
+    background-color: #2a2a2a;
+    color: #bb86fc;
+}
+
+.resumen td {
+    color: #e0e0e0;
+}
+
+/* Botón de Continuar Compra */
+.resumen a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #bb86fc; /* Botón púrpura */
+    color: #121212; /* Texto oscuro para contraste */
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resumen a:hover {
+    background-color: #9a67ea; /* Hover más claro */
+}
+
+/* Mensaje si el carrito está vacío */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #cf6679; /* Rojo apagado para mensajes */
+    padding: 20px;
+}
+
+.deshabilitado {
+    background-color: #333; /* Fondo gris oscuro */
+    cursor: not-allowed;
+}

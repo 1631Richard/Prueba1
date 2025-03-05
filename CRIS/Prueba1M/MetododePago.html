@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago</title>
+    <link rel="stylesheet" href="EstiloMetododePago.css">
+</head>
+<body>
+    <!-- Botón para regresar al carrito de compras -->
+    <button onclick="location.href='CarritoCompras.php'" class="btn-regresar">
+        <i class="fa fa-arrow-left"></i>
+    </button>
+    <h1>Método de Pago</h1>
+
+    <div class="container clearfix">
+        <!-- Opciones de pago -->
+        <div class="opciones-pago">
+            <div class="opcion">
+                <label>
+                    <input type="radio" name="metodo_pago" value="tarjeta" onclick="mostrarFormulario('tarjeta')">
+                    Tarjeta
+                </label>
+            </div>
+            <div class="opcion">
+                <label>
+                    <input type="radio" name="metodo_pago" value="yape" onclick="mostrarFormulario('yape')">
+                    Yape
+                </label>
+            </div>
+            <div class="opcion">
+                <label>
+                    <input type="radio" name="metodo_pago" value="efectivo" onclick="mostrarFormulario('efectivo')">
+                    Pago Efectivo
+                </label>
+            </div>
+        </div>
+
+        <!-- Tabla de métodos de pago -->
+        <table class="tabla-pagos">
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Detalles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tarjetas de Crédito</td>
+                    <td>
+                        <img src="Img/tarjetas.png" alt="Visa">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transferencia y Depósito en Efectivo</td>
+                    <td>
+                        <img src="Img/PagoEfectivo.png" alt="Pago Efectivo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pago en Bancos</td>
+                    <td>
+                        <img src="Img/bcp.png" alt="BCP">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Yape</td>
+                    <td>
+                        <img src="Img/yape.png" alt="Logo de Yape" width="100">
+                    </td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+
+        <!-- Formulario para completar el pago -->
+        <div class="form-container" id="formularioPago">
+            <div id="formTarjeta" style="display:none;">
+                <h3>Pago con Tarjeta</h3>
+                <form action="ConfirmaciondeCompra.html" method="GET">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tarjetaNumero">Número de Tarjeta</label>
+                        <input type="text" id="tarjetaNumero" name="tarjetaNumero" placeholder="Número de tarjeta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tarjetaFecha">Fecha de Vencimiento (MM/AA)</label>
+                        <input type="text" id="tarjetaFecha" name="tarjetaFecha" placeholder="MM/AA" pattern="\d{2}/\d{2}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tarjetaCVV">CVV</label>
+                        <input type="text" id="tarjetaCVV" name="tarjetaCVV" placeholder="CVV" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tarjetaCorreo">Correo Electrónico</label>
+                        <input type="email" id="tarjetaCorreo" name="tarjetaCorreo" placeholder="Correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn-pagar">Pagar</button>
+                </form>
+            </div>
+
+            <div id="formYape" style="display:none;">
+                <h3>Pago con Yape</h3>
+                <form action="ConfirmaciondeCompra.html" method="GET">
+                    <div class="form-group">
+                        <label for="yapeNumero">Número de Yape</label>
+                        <input type="text" id="yapeNumero" name="yapeNumero" placeholder="Número de Yape" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yapeCorreo">Correo Electrónico</label>
+                        <input type="email" id="yapeCorreo" name="yapeCorreo" placeholder="Correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn-pagar">Pagar</button>
+                </form>
+            </div>
+
+            <div id="formEfectivo" style="display:none;">
+                <h3>Pago en Efectivo</h3>
+                <form action="ConfirmaciondeCompra.html" method="GET">
+                    <div class="form-group">
+                        <label for="efectivoCodigo">Código</label>
+                        <input type="text" id="efectivoCodigo" name="efectivoCodigo" placeholder="Código" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="efectivoCorreo">Correo Electrónico</label>
+                        <input type="email" id="efectivoCorreo" name="efectivoCorreo" placeholder="Correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn-pagar">Pagar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="MetodoPago.js"></script>
+</body>
+</html>
+
