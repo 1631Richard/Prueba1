@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #pokemon-img {
+            margin-top: 20px;
+            max-width: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <input type="text" id="pokemon-input" placeholder="Ingrese nombre o número">
+    <button onclick="buscarPokemon()">Buscar</button>
+    <div>
+        <h2 id="pokemon-name"></h2>
+        <img id="pokemon-img" src="" alt="">
+    </div>
+    <script>
+        function buscarPokemon() {
+            const pokemon = document.getElementById("pokemon-input").value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+            
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Pokémon no encontrado");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("pokemon-name").textContent = data.name.toUpperCase();
+                    document.getElementById("pokemon-img").src = data.sprites.front_default;
+                })
+                .catch(error => {
+                    document.getElementById("pokemon-name").textContent = "No encontrado";
+                    document.getElementById("pokemon-img").src = "";
+                });
+        }
+    </script>
+</body>
+</html>
+
